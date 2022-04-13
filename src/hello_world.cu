@@ -7,7 +7,10 @@ __global__ void helloWorld()
 
 int main()
 {
-    helloWorld<<<1, 3>>>();
+    size_t num_blocks = 1;
+    size_t num_threads_per_block = 3;
+
+    helloWorld<<<num_blocks, num_threads_per_block>>>();
     cudaDeviceSynchronize();
 }
 

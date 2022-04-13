@@ -8,7 +8,10 @@ __global__ void printIndicies()
 
 int main()
 {
-    printIndicies<<<2, 3>>>();
+    size_t num_blocks = 2;
+    size_t num_threads_per_block = 3;
+
+    printIndicies<<<num_blocks, num_threads_per_block>>>();
     cudaDeviceSynchronize();
 }
 
