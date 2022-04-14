@@ -11,13 +11,11 @@ int main()
     const size_t num_threads_per_block = 3;
 
     helloWorld<<<num_blocks, num_threads_per_block>>>();
-    cudaDeviceSynchronize();
+    // cudaDeviceSynchronize();
 }
 
 /* OUTPUT
 
-Hello World!
-Hello World!
-Hello World!
+
 
 */

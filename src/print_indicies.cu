@@ -8,8 +8,8 @@ __global__ void printIndicies()
 
 int main()
 {
-    size_t num_blocks = 2;
-    size_t num_threads_per_block = 3;
+    const size_t num_blocks = 2;
+    const size_t num_threads_per_block = 3;
 
     printIndicies<<<num_blocks, num_threads_per_block>>>();
     cudaDeviceSynchronize();
