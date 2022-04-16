@@ -6,7 +6,7 @@ Requirements:
 * gcc
 * cmake
 * nvidia-cuda-toolkitnvidia-cuda-toolkit
-* ([NVIDIA Nsight Systems](https://mainer.nvidia.com/nsight-systems))
+* ([NVIDIA Nsight Systems](https://developer.nvidia.com/nsight-systems))
 
 ```bash
 git clone https://github.com/ozakiryota/cuda_cpp_tutorial.git
