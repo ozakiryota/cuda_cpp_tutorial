@@ -10,18 +10,19 @@ RUN apt-get update && \
 		unzip \
 		git
 ########## CUDA ##########
-COPY copy_file/nsight-systems-2022.2.1_2022.2.1.31-1_amd64.deb /root/nsight-systems-2022.2.1_2022.2.1.31-1_amd64.deb
 RUN apt-get update && \
     apt-get install -y \
 		build-essential \
 		cmake \
-		nvidia-cuda-toolkit \
-		/root/nsight-systems-2022.2.1_2022.2.1.31-1_amd64.deb && \
+		nvidia-cuda-toolkit && \
 	apt-get remove -y gcc && \
 	ln -s /usr/bin/gcc-8 /usr/bin/gcc && \
 	ln -s /usr/bin/g++-8 /usr/bin/g++ && \
 	ln -s /usr/bin/gcc-8 /usr/bin/cc && \
-	ln -s /usr/bin/g++-8 /usr/bin/c++
+	ln -s /usr/bin/g++-8 /usr/bin/c++ && \
+	cd ~/ && \
+	wget https://developer.download.nvidia.com/devtools/repos/ubuntu2004/amd64/nsight-systems-2022.2.1_2022.2.1.31-1_amd64.deb && \
+	apt-get install -y ./nsight-systems-2022.2.1_2022.2.1.31-1_amd64.deb
 ########## Cache busting ##########
 ARG CACHEBUST=1
 ########## Tutorial package ##########
