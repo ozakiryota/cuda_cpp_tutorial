@@ -16,7 +16,11 @@ cmake ..
 make
 ```
 
-### Build locally
+### Build with Docker
+Requirements:
+* Docker
+* ([NVIDIA Nsight Systems](https://mainer.nvidia.com/nsight-systems))
+
 ```bash
 git clone https://github.com/ozakiryota/cuda_cpp_tutorial.git
 cd cuda_cpp_tutorial/docker

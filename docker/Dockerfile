@@ -22,6 +22,8 @@ RUN apt-get update && \
 	ln -s /usr/bin/g++-8 /usr/bin/g++ && \
 	ln -s /usr/bin/gcc-8 /usr/bin/cc && \
 	ln -s /usr/bin/g++-8 /usr/bin/c++
+########## Cache busting ##########
+ARG CACHEBUST=1
 ########## Tutorial package ##########
 RUN cd ~/ && \
 	git clone https://github.com/ozakiryota/cuda_cpp_tutorial.git && \
