@@ -5,7 +5,7 @@
 Requirements:
 * gcc
 * cmake
-* nvidia-cuda-toolkitnvidia-cuda-toolkit
+* nvidia-cuda-toolkit
 * ([NVIDIA Nsight Systems](https://developer.nvidia.com/nsight-systems))
 
 ```bash
